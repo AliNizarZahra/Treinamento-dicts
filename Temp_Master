@@ -1,0 +1,41 @@
+temperaturas_2023 = {
+    "janeiro": 30,
+    "fevereiro" : 28,
+    "março": 27,
+    "abril": 25,
+    "maio": 22,
+    "junho": 20,
+    "julho":19,
+    "agosto": 20,
+    "setembro":17,
+    "outubro":21,
+    "novembro":26,
+
+}
+tradutor_de_mes = {
+    1: "janeiro",
+    2: "fevereiro",
+    3: "março",
+    4: "abril",
+    5: "maio",
+    6: "junho",
+    7: "julho",
+    8: "agosto",
+    9: "setembro",
+    10: "outubro",
+    11: "novembro",
+} #Biblioteca pra relacionar número de entrada com um Mês.
+while True: 
+    try:
+        mes=int(input("""Digite o número do mês que você deseja saber a temperatura média \n"""))
+        if mes==12:
+            print("""Desculpe, ainda não temos dados para o mês de Dezembro""")
+    except ValueError:
+        print("Este valor não é um número")
+    else:
+        if mes <= 12 and mes > 0:
+            print("A temperatura média no mês de",tradutor_de_mes[mes], "foi de",temperaturas_2023[tradutor_de_mes[mes]])
+        else: 
+            print("Mês inválido, espertinha >:(")
+
+
